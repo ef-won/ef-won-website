@@ -8,15 +8,21 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* THIS fixes vertical alignment */
+  align-items: center;
   padding: 20px 50px;
+  background: rgba(17, 24, 42, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
   display: flex;
+  gap: 20px;
   align-items: center;
-  margin-right: 20px;
 }
+
 
 nav a:hover { color: #00ffd5; }
 
