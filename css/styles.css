@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 50px;
   background: rgba(17, 24, 42, 0.7);
   backdrop-filter: blur(10px);
   position: sticky;
@@ -22,7 +22,10 @@ nav {
   gap: 20px;
   align-items: center;
 }
-
+nav a{
+  text-decoration: none;
+  color: white;
+}
 
 nav a:hover { color: #00ffd5; }
 
