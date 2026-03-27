@@ -1,69 +1,71 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0f19;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0b0f19, #05070f);
+  color: #fff;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #11182a;
+  padding: 20px 50px;
+  background: rgba(17,24,42,0.7);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
+  color: #ccc;
+  margin-left: 20px;
   text-decoration: none;
 }
 
-nav a:hover {
-  color: #00ffd5;
-}
+nav a:hover { color: #00ffd5; }
 
 .container {
-  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
 .hero {
-  padding: 100px 20px;
   text-align: center;
+  padding: 140px 20px;
 }
 
+.hero h1 {
+  font-size: 50px;
+  background: linear-gradient(90deg,#00ffd5,#00aaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p { color:#aaa; font-size:18px; }
+
 .btn {
-  padding: 12px 20px;
-  background: #00ffd5;
-  color: black;
-  border-radius: 8px;
-  display: inline-block;
-  margin: 10px;
-  text-decoration: none;
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-block;
+  margin:10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg,#00ffd5,#00aaff);
+  color:#000;
+}
+
+.btn-outline {
+  border:1px solid #00ffd5;
+  color:#00ffd5;
 }
 
 .card {
-  background: #11182a;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+  background: rgba(17,24,42,0.8);
+  padding:25px;
+  border-radius:15px;
+  margin:20px 0;
 }
 
-.item {
-  background: #11182a;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-}
-
-.box {
-  background: #11182a;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.tag {
-  color: #00ffd5;
-}
+.tag { color:#00ffd5; }
