@@ -6,9 +6,9 @@ export default function Header() {
       <h2>Ef-Won</h2>
       <nav className="flex gap-5 items-center">
         <Link href="/" className="no-underline text-white hover:text-primary">Home</Link>
-        <Link href="/about" className="no-underline text-white hover:text-primary">About</Link>
-        <Link href="/projects" className="no-underline text-white hover:text-primary">Projects</Link>
         <Link href="/services" className="no-underline text-white hover:text-primary">Services</Link>
+        <Link href="/projects" className="no-underline text-white hover:text-primary">Projects</Link>
+        <Link href="/about" className="no-underline text-white hover:text-primary">About</Link>
         <Link href="/contact" className="no-underline text-white hover:text-primary">Contact</Link>
       </nav>
     </header>
