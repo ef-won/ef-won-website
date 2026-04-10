@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface ProjectCardProps {
   title: string;
@@ -41,11 +42,21 @@ export default function ProjectCard({
         </div>
       )}
       {liveUrl && (
-        <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-          <button className="mt-2 px-5 py-2 bg-black hover:bg-slate-900 text-white rounded-lg font-semibold shadow transition">
-            🚀 {buttonLabel}
-          </button>
-        </a>
+        liveUrl.startsWith('/') ? (
+          <Link href={liveUrl} legacyBehavior>
+            <a>
+              <button className="mt-2 px-5 py-2 bg-black hover:bg-slate-900 text-white rounded-lg font-semibold shadow transition">
+                🚀 {buttonLabel}
+              </button>
+            </a>
+          </Link>
+        ) : (
+          <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+            <button className="mt-2 px-5 py-2 bg-black hover:bg-slate-900 text-white rounded-lg font-semibold shadow transition">
+              🚀 {buttonLabel}
+            </button>
+          </a>
+        )
       )}
     </div>
   );
