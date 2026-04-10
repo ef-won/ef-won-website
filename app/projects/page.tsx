@@ -1,26 +1,55 @@
+
 import Header from '../components/Header'
+import ProjectCard from '../components/ProjectCard'
 
 export default function Projects() {
   return (
     <>
       <Header />
       <div className="max-w-[1100px] mx-auto px-5 py-[60px]">
-        <div className="bg-[rgba(17,24,42,0.8)] p-[25px] rounded-2xl my-5">
-          <h3>Multi-Tenant API Platform</h3>
-          <p><span className="text-primary">Problem:</span> Businesses needed isolated backend systems per customer</p>
-          <p><span className="text-primary">Solution:</span> Built scalable tenant-based API architecture</p>
-          <p><span className="text-primary">Tech:</span> Node.js, PostgreSQL, Docker</p>
-          <p>GitHub: github.com/yourname/api</p>
-          <p>Live Demo: Coming soon</p>
-        </div>
-        <div className="bg-[rgba(17,24,42,0.8)] p-[25px] rounded-2xl my-5">
-          <h3>Server Deployment Automation</h3>
-          <p><span className="text-primary">Problem:</span> Manual deployments wasted hours</p>
-          <p><span className="text-primary">Solution:</span> Automated VPS provisioning and setup</p>
-          <p><span className="text-primary">Tech:</span> Bash, Nginx, AWS</p>
-          <p>GitHub: github.com/yourname/deploy</p>
-          <p>Live Demo: Coming soon</p>
-        </div>
+        <ProjectCard
+          title="Docker Auto Deployment Platform"
+          description="Automated system that deploys GitHub repositories into live applications using Docker containers, with automatic routing and subdomain provisioning."
+          tech="Docker • Python • Traefik • Linux VPS • GitHub"
+          features={[
+            'GitHub repo deployment',
+            'Automatic Docker build & container execution',
+            'Dynamic routing via reverse proxy (Traefik)',
+            'Subdomain-based deployment (app.domain.com)',
+            'Multi-app VPS hosting',
+          ]}
+          apiEndpoint="https://api.domain.com/deploy"
+          liveUrl="https://deploy.domain.com"
+          buttonLabel="🚀 Deploy & Test Live"
+        />
+        <ProjectCard
+          title="Multi-Tenant API Platform"
+          description="Businesses needed isolated backend systems per customer. Built scalable tenant-based API architecture."
+          tech="Node.js • PostgreSQL • Docker"
+          features={[
+            'Isolated backend per customer',
+            'Scalable multi-tenant API',
+            'Secure data separation',
+            'Automated tenant provisioning',
+          ]}
+          liveUrl={undefined}
+          apiEndpoint={undefined}
+          buttonLabel="GitHub: github.com/yourname/api"
+        />
+        <ProjectCard
+          title="Server Deployment Automation"
+          description="Manual deployments wasted hours. Automated VPS provisioning and setup."
+          tech="Bash • Nginx • AWS"
+          features={[
+            'Automated VPS provisioning',
+            'Scripted server setup',
+            'Nginx reverse proxy automation',
+            'AWS integration',
+          ]}
+          liveUrl={undefined}
+          apiEndpoint={undefined}
+          buttonLabel="GitHub: github.com/yourname/deploy"
+        />
       </div>
     </>
   )
