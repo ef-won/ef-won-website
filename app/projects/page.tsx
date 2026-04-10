@@ -19,7 +19,7 @@ export default function Projects() {
             'Multi-app VPS hosting',
           ]}
           apiEndpoint="https://api.domain.com/deploy"
-          liveUrl="https://deploy.domain.com"
+          liveUrl="/projects/deploy"
           buttonLabel="🚀 Deploy & Test Live"
         />
         <ProjectCard
