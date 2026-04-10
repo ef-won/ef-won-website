@@ -18,7 +18,7 @@ export default function Projects() {
             'Subdomain-based deployment (app.domain.com)',
             'Multi-app VPS hosting',
           ]}
-          apiEndpoint="https://api.domain.com/deploy"
+          // apiEndpoint removed to ensure button navigates to liveUrl only
           liveUrl="/projects/deploy"
           buttonLabel="🚀 Deploy & Test Live"
         />
