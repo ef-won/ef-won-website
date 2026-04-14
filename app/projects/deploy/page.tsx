@@ -13,7 +13,7 @@ export default function DeployDashboard() {
     setLoading(true);
     setResult('');
     try {
-      const res = await fetch('https://api.ef-won/deploy', {
+      const res = await fetch('https://api.ef-won.com/deploy', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ repoUrl, appName, port })
