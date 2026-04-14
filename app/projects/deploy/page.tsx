@@ -16,7 +16,7 @@ export default function DeployDashboard() {
       const res = await fetch('https://api.ef-won.com/deploy', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ repoUrl, appName, port })
+        body: JSON.stringify({ repo, app_name, port })
       });
       const data = await res.json();
       setResult(data.url ? `Live URL: ${data.url}` : 'Deployment failed.');
